@@ -20,4 +20,10 @@ class PlaceViewModel: ViewModel() {
         Log.d("ssunny", "viewModel中的searchPlaces")
         searchLiveData.value = query
     }
+
+    fun savePlace(place: Place) = Repository.savePlace(place)
+
+    fun getSavedPlace() = Repository.getSavedPlace()
+
+    fun isPlaceSaved() = Repository.isPlaceSaved()
 }
